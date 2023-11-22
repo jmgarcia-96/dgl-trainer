@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.icon {
+  font-size: 30px;
+  color: var(--color-white);
+  display: inline-block;
+  height: 65px;
+  width: 65px;
+  background: var(--color-primary);
+  border-radius: 25%;
+  line-height: 65px;
+  text-align: center;
+}
+
+:host ::ng-deep .p-button {
+  width: 100% !important;
+}
+
+.insta-account {
+  color: var(--color-white);
+  &:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+}

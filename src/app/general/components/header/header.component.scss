@@ -1,0 +1,84 @@
+:host ::ng-deep p-menubarsub {
+  width: 100% !important;
+}
+:host ::ng-deep .p-menubar-root-list {
+  justify-content: flex-end;
+}
+
+:host ::ng-deep .p-menubar-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+:host ::ng-deep .p-menubar {
+  justify-content: center !important;
+  //background: var(--color-bg);
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 10000; // This prevents elements to be seen through the toolbar.
+  top: 0; // Required for "position: sticky" to take effect.
+  border-radius: 0;
+  padding: 0 15px;
+  padding-top: 50px;
+}
+
+:host
+  ::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link {
+  &:focus {
+    box-shadow: none;
+    transform: scaleX(1);
+  }
+  &:hover {
+    background-color: transparent;
+    .p-menuitem-text {
+      color: var(--color-primary) !important;
+    }
+  }
+  & .p-menuitem-text {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+  }
+}
+
+:host ::ng-deep .p-menubar .p-menuitem.active {
+  &::after {
+    transform: scaleX(1) !important;
+  }
+  .p-menuitem-text {
+    color: var(--color-primary) !important;
+  }
+}
+
+.logo-header {
+  text-align: center;
+}
+
+.logo-header:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.logo-header p {
+  margin: 0;
+  font-size: 35px;
+  font-family: var(--font-logo);
+
+  color: var(--color-primary);
+}
+
+.logo-header p span {
+  color: var(--color-white);
+}

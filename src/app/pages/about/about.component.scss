@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+:host ::ng-deep .p-carousel .p-link {
+  color: var(--color-primary) !important;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    color: var(--color-white) !important;
+    background-color: var(--color-primary) !important;
+  }
+}
+
+:host
+  ::ng-deep
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator.p-highlight
+  button {
+  background-color: var(
+    --color-primary
+  ) !important; /* Cambia este color según tus preferencias */
+}
+
+p {
+  color: #c4c4c4;
+}
+
+/*---------------------
+  Class Details Section
+-----------------------*/
+.trainer-info {
+  margin-top: 28px;
+  margin-bottom: 26px;
+}
+
+.trainer-info li {
+  font-size: 14px;
+  color: #c4c4c4;
+  list-style: none;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #252525;
+  margin-bottom: 10px;
+}
+
+.trainer-info li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.trainer-info li span {
+  color: #ffffff;
+  font-weight: 700;
+  width: 150px;
+  display: inline-block;
+}
