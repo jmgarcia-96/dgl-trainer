@@ -63,7 +63,9 @@ li {
   color: var(--color-white);
   border: 0;
   &:enabled:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 5px 5px 40px var(--color-primary);
   }
 }
 
