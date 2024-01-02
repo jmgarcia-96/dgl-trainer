@@ -15,6 +15,7 @@ import { GeneralService } from './general/services/general.service';
 })
 export class AppComponent implements OnInit {
   showLoader: boolean = false;
+  active: string = '';
   constructor(private router: Router, private generalService: GeneralService) {}
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -34,7 +35,10 @@ export class AppComponent implements OnInit {
         let item = this.generalService.items.find(
           (i) => i.routerLink === event.url.split('/')[1]
         );
-        if (item) item.styleClass = 'active';
+        if (item) {
+          item.styleClass = 'active';
+          this.active = event.url;
+        }
       }
     });
   }

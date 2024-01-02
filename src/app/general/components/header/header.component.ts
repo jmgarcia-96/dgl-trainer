@@ -1,42 +1,26 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  NavigationStart,
-  Router,
-} from '@angular/router';
-import { MenuItem } from 'primeng/api';
-import { filter } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 import { GeneralService } from '../../services/general.service';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  responsiveMenuVisible: Boolean = false;
-  pagePosition: string = '';
+  @Input() active: string = '';
+  isOpened: boolean = false;
 
   constructor(public generalService: GeneralService) {}
 
   ngOnInit() {}
 
-  // scroll(el: any) {
-  //   localStorage.setItem('page', el);
-  //   if (document.getElementById(el)) {
-  //     document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
-  //   } else {
-  //     this.router
-  //       .navigate(['/home'])
-  //       .then(() =>
-  //         document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' })
-  //       );
-  //   }
-  //   this.responsiveMenuVisible = false;
-  // }
+  toggleMenu() {
+    this.isOpened = !this.isOpened;
+    console.log(this.isOpened ? 'ABIERTO' : 'CERRADO');
+  }
 
   activeMenu(event: any) {
+    console.log(this.active);
+    this.isOpened = false;
     let node;
     if (event.target.classList.contains('p-submenu-header') == true) {
       node = 'submenu';

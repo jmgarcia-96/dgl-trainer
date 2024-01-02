@@ -9,15 +9,12 @@
   padding: 60px 0 60px 0;
   background-image: url("../../../assets/img/hero-prueba.jpg");
   top: -35px;
+  background-position: center;
 }
 
 .hero h2 {
   color: var(--color-white);
   font-family: var(--font-primary);
-  font-size: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 42px;
   strong {
     color: var(--color-primary);
   }
@@ -47,12 +44,14 @@
 .hero .intro-container {
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
 }
 
-::ng-deep p-button .p-button {
-  &:hover {
-    transform: scale(0.9);
-    transition: all 0.3s;
-    background-color: red;
-  }
-}
+// ::ng-deep p-button .p-button {
+//   &:hover {
+//     transform: scale(0.9);
+//     transition: all 0.3s;
+//     background-color: red;
+//   }
+// }

@@ -13,7 +13,6 @@
 }
 :host ::ng-deep .p-menubar {
   justify-content: center !important;
-  //background: var(--color-bg);
   background: transparent;
   border: none;
   position: relative;
@@ -21,7 +20,6 @@
   top: 0; // Required for "position: sticky" to take effect.
   border-radius: 0;
   padding: 0 15px;
-  padding-top: 50px;
 }
 
 :host
@@ -64,21 +62,83 @@
 
 .logo-header {
   text-align: center;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+  & p {
+    margin: 0;
+    font-size: 35px;
+    font-family: var(--font-logo);
+    color: var(--color-primary);
+    & span {
+      color: var(--color-white);
+    }
+  }
 }
 
-.logo-header:hover {
-  transform: scale(1.1);
-  transition: all 0.3s;
+/* PRUEBAS */
+.zoom-animation {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-.logo-header p {
-  margin: 0;
-  font-size: 35px;
-  font-family: var(--font-logo);
-
-  color: var(--color-primary);
+img {
+  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor padre */
+  max-width: 170px; /* No superará el tamaño natural de la imagen */
+  min-width: 70px;
+  height: auto; /* Mantendrá la proporción original de la imagen */
 }
 
-.logo-header p span {
+.menu-item a {
   color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-primary);
+  }
+  &.active {
+    color: var(--color-primary);
+  }
+}
+
+:host ::ng-deep .p-overlaypanel {
+  width: 100% !important;
+  left: 0 !important;
+}
+
+:host ::ng-deep .p-menu .p-menu-list > .p-menuitem > .p-menuitem-link {
+  &:focus {
+    box-shadow: none;
+    transform: scaleX(1);
+  }
+  &:hover {
+    background-color: transparent;
+    .p-menuitem-text {
+      color: var(--color-primary) !important;
+    }
+  }
+  & .p-menuitem-text {
+    color: var(--color-gray);
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+  }
+}
+
+:host ::ng-deep .p-menu .p-menuitem.active {
+  .p-menuitem-text {
+    color: var(--color-primary) !important;
+  }
 }
