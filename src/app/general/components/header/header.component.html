@@ -24,7 +24,7 @@
 </p-menubar> -->
 
 <div
-  class="flex justify-content-between flex-row relative px-8 pt-5 z-5 gap-8 md:gap-1"
+  class="flex justify-content-between flex-row relative px-4 lg:px-8 pt-5 z-5 gap-8 md:gap-1"
 >
   <div class="flex flex-row cursor-pointer zoom-animation" routerLink="/home">
     <img src="assets/img/Logo-DGL2.png" />
@@ -63,14 +63,14 @@
 </div>
 
 <div class="w-full">
-  <p-overlayPanel #menu>
+  <!-- <p-overlayPanel #menu>
     <div class="overlay"></div>
-  </p-overlayPanel>
-  <!-- <p-menu
+  </p-overlayPanel> -->
+  <p-menu
     #menu
     [model]="generalService.items"
     [popup]="true"
     routerLinkActive="active"
     (click)="activeMenu($event)"
-  ></p-menu> -->
+  ></p-menu>
 </div>
