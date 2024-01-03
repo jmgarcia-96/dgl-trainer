@@ -1,12 +1,11 @@
-<!-- ======= About Section ======= -->
 <section id="about" class="about">
   <div class="container">
     <div class="section-header">
       <p>Aprende más <span>sobre mí</span></p>
     </div>
 
-    <div class="md:flex flex-row justify-content-between">
-      <div class="col-12 md:col-6">
+    <div class="flex flex-column-reverse lg:flex-row justify-content-between">
+      <div class="lg:col-7 trainer-info">
         <h4 class="uppercase uWhite text-2xl my-3">Daniel García Lanzas</h4>
         <span class="uPrimary">Entrenador personal</span>
         <p class="text-justify">
@@ -36,8 +35,10 @@
           capaces de conocer su verdadero potencial y poder mejorar sus vidas.
         </p>
       </div>
-      <div class="col-12 md:col-6 flex align-items-center">
-        <p-carousel
+      <div class="lg:col-5">
+        <img src="assets/img/chefs/chefs-1.jpg" />
+        <img src="assets/img/chefs/chefs-2.jpg" />
+        <!-- <p-carousel
           [value]="slides"
           [numVisible]="1"
           [numScroll]="1"
@@ -47,15 +48,8 @@
           <ng-template let-item pTemplate="item">
             <img [src]="item.img" width="100%" />
           </ng-template>
-        </p-carousel>
+        </p-carousel> -->
       </div>
     </div>
   </div>
 </section>
-<!-- End About Section -->
-
-<!-- <ul class="trainer-info col-6">
-                <li><span>Edad</span>35</li>
-                <li><span>Peso</span>148lbs</li>
-                <li><span>Altura</span>10' 2``</li>
-              </ul> -->

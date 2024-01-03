@@ -88,6 +88,7 @@ li {
 
 section {
   padding-top: 60px;
+  padding-bottom: 60px;
   margin-top: -60px;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
@@ -97,19 +98,26 @@ section {
   text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
+  & p {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    color: var(--color-white);
+    text-transform: uppercase;
+    & span {
+      color: var(--color-primary);
+    }
+  }
 }
 
-.section-header p {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 600;
-  font-family: var(--font-secondary);
-  color: var(--color-white);
-}
-
-.section-header p span,
-.logo-header p span {
-  color: var(--color-primary);
+@media screen and (max-width: 768px) {
+  section {
+    //padding-bottom: 60px;
+    & .section-header p {
+      font-size: 30px; /* Tamaño del texto reducido para pantallas más pequeñas */
+    }
+  }
 }
 
 /* Preloder */
@@ -168,6 +176,7 @@ section {
   color: var(--color-white);
 }
 
+// Configuracion overlayPanel para menu movil
 .p-overlaypanel {
   width: 100% !important;
   &:before,
