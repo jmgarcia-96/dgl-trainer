@@ -43,10 +43,22 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+body,
+html {
   font-family: var(--font-secondary);
   color: var(--color-default);
   background-color: var(--color-section);
+  height: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -59,16 +71,16 @@ li {
   font-family: var(--font-primary);
 }
 
-.p-button {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: 0;
-  &:enabled:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    box-shadow: 5px 5px 40px var(--color-primary);
-  }
-}
+// .p-button {
+//   background-color: var(--color-primary);
+//   color: var(--color-white);
+//   border: 0;
+//   &:enabled:hover {
+//     background-color: var(--color-primary);
+//     color: var(--color-white);
+//     box-shadow: 5px 5px 40px var(--color-primary);
+//   }
+// }
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -162,9 +174,32 @@ section {
   }
 }
 
+// COLORS
 .uPrimary {
   color: var(--color-primary);
 }
+.uBlue {
+  color: #3b82f6;
+}
 .uWhite {
   color: var(--color-white);
+}
+
+.p-overlaypanel {
+  width: 100% !important;
+  &:before,
+  &:after {
+    display: none;
+  }
+  & .p-overlaypanel-content {
+    padding: 0;
+  }
+}
+
+.zoom-animation {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

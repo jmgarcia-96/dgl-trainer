@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { GeneralService } from '../../services/general.service';
+import { OverlayPanel } from 'primeng/overlaypanel';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,6 +8,7 @@ import { GeneralService } from '../../services/general.service';
 })
 export class HeaderComponent implements OnInit {
   @Input() active: string = '';
+  @ViewChild('menu') menu: OverlayPanel | undefined;
   isOpened: boolean = false;
 
   constructor(public generalService: GeneralService) {}
@@ -15,26 +17,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isOpened = !this.isOpened;
-    console.log(this.isOpened ? 'ABIERTO' : 'CERRADO');
   }
 
-  activeMenu(event: any) {
-    console.log(this.active);
+  activeMenu() {
     this.isOpened = false;
-    let node;
-    if (event.target.classList.contains('p-submenu-header') == true) {
-      node = 'submenu';
-    } else if (event.target.tagName === 'SPAN') {
-      node = event.target.parentNode.parentNode;
-    } else {
-      node = event.target.parentNode;
-    }
-    if (node != 'submenu') {
-      let menuitem = document.getElementsByClassName('p-menuitem');
-      for (let i = 0; i < menuitem.length; i++) {
-        menuitem[i].classList.remove('active');
-      }
-      node.classList.add('active');
-    }
+    this.menu?.hide();
   }
 }
