@@ -1,10 +1,3 @@
-.zoom-animation {
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 img {
   width: 100%; /* La imagen ocupará el 100% del ancho del contenedor padre */
   max-width: 170px; /* No superará el tamaño natural de la imagen */
