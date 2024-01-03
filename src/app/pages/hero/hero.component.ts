@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hero',
@@ -36,7 +37,9 @@ export class HeroComponent {
     },
   ];
 
-  constructor() {}
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('DGLTrainer - Inicio');
+  }
 
   ngOnInit() {
     this.images = [

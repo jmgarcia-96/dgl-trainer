@@ -93,26 +93,10 @@ section {
   padding-right: 2rem !important;
 }
 
-// section {
-//   overflow: hidden;
-//   padding: 80px 0;
-// }
-
 .section-header {
   text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
-}
-
-.section-header h2 {
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  color: red;
-  text-transform: uppercase;
-  font-family: var(--font-secondary);
 }
 
 .section-header p {
@@ -129,7 +113,6 @@ section {
 }
 
 /* Preloder */
-
 #preloader {
   position: fixed;
   width: 100%;
