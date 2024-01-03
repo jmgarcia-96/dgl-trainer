@@ -1,9 +1,10 @@
-<!-- ======= Frequently Asked Questions Section ======= -->
+<app-breadcrumb
+  [title]="'Preguntas'"
+  [subtitle]="'Frecuentes'"
+  [img]="'assets/img/mancuernas5.jpg'"
+></app-breadcrumb>
 <section id="faq" class="faq">
-  <div class="container pb-6">
-    <div class="section-header">
-      <p>Preguntas <span>Frecuentes</span></p>
-    </div>
+  <div class="container pt-6">
     <p-accordion>
       <p-accordionTab header="{{ item.question }}" *ngFor="let item of faq">
         <p>
@@ -13,4 +14,3 @@
     </p-accordion>
   </div>
 </section>
-<!-- End Frequently Asked Questions Section -->

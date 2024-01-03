@@ -71,17 +71,6 @@ li {
   font-family: var(--font-primary);
 }
 
-// .p-button {
-//   background-color: var(--color-primary);
-//   color: var(--color-white);
-//   border: 0;
-//   &:enabled:hover {
-//     background-color: var(--color-primary);
-//     color: var(--color-white);
-//     box-shadow: 5px 5px 40px var(--color-primary);
-//   }
-// }
-
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -120,7 +109,9 @@ section {
   }
 }
 
-/* Preloder */
+/*--------------------------------------------------------------
+# PRELOADER
+--------------------------------------------------------------*/
 #preloader {
   position: fixed;
   width: 100%;
@@ -165,7 +156,9 @@ section {
   }
 }
 
-// COLORS
+/*--------------------------------------------------------------
+# COLORS
+--------------------------------------------------------------*/
 .uPrimary {
   color: var(--color-primary);
 }
@@ -176,7 +169,36 @@ section {
   color: var(--color-white);
 }
 
-// Configuracion overlayPanel para menu movil
+/*--------------------------------------------------------------
+# BOTONES
+--------------------------------------------------------------*/
+.btn-primary {
+  & .p-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 0;
+    &:enabled:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+  }
+  &--shadow {
+    & .p-button {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: 0;
+      &:enabled:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        box-shadow: 5px 5px 40px var(--color-primary);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Configuracion overlayPanel para menu movil
+--------------------------------------------------------------*/
 .p-overlaypanel {
   width: 100% !important;
   &:before,
@@ -188,10 +210,27 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# Animacion zoom
+--------------------------------------------------------------*/
 .zoom-animation {
   cursor: pointer;
   transition: transform 0.3s ease;
   &:hover {
     transform: scale(1.1);
+  }
+}
+
+/*--------------------------------------------------------------
+# Boton Pantalla Hero
+--------------------------------------------------------------*/
+.btn-hero .p-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 0;
+  &:enabled:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 5px 5px 40px var(--color-primary);
   }
 }

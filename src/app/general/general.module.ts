@@ -5,10 +5,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, BreadcrumbComponent],
   imports: [CommonModule, MenuModule, ButtonModule, OverlayPanelModule],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, BreadcrumbComponent],
 })
 export class GeneralModule {}

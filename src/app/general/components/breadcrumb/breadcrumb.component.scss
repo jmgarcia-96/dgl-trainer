@@ -1,24 +1,17 @@
-:host
-  ::ng-deep
-  .p-accordion
-  .p-accordion-header:not(.p-disabled)
-  .p-accordion-header-link:focus {
-  box-shadow: none;
-}
-
 .breadcrumb-section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   & .overlay-intro {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 0;
+    top: 115px;
     left: 0px;
     padding: 0;
-    height: 100%;
+    height: 252px;
     width: 100%;
     opacity: 2;
   }

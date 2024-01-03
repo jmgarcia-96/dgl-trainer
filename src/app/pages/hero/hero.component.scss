@@ -10,48 +10,34 @@
   background-image: url("../../../assets/img/hero-prueba.jpg");
   top: -35px;
   background-position: center;
-}
 
-.hero h2 {
-  color: var(--color-white);
-  font-family: var(--font-primary);
-  strong {
-    color: var(--color-primary);
+  & h2 {
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    strong,
+    span {
+      color: var(--color-primary);
+    }
+  }
+  & p {
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  & .overlay-intro {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+  & .intro-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
   }
 }
-
-.hero h2 span {
-  color: var(--color-primary);
-}
-
-.hero p {
-  color: var(--color-white);
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-
-.hero .overlay-intro {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-}
-
-.hero .intro-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-}
-
-// ::ng-deep p-button .p-button {
-//   &:hover {
-//     transform: scale(0.9);
-//     transition: all 0.3s;
-//     background-color: red;
-//   }
-// }
