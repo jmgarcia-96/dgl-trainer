@@ -78,15 +78,17 @@ li {
 section {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-top: -60px;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
+  &.breadcrumb-section {
+    padding: 0;
+  }
 }
 
 .section-header {
   text-align: center;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  //padding-bottom: 30px;
+  //padding-top: 30px;
   & p {
     margin: 0;
     font-size: 48px;
@@ -100,9 +102,10 @@ section {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section {
-    //padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     & .section-header p {
       font-size: 30px; /* Tamaño del texto reducido para pantallas más pequeñas */
     }

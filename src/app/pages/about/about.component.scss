@@ -25,6 +25,22 @@
 // }
 
 .trainer-info {
+  & h4 {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    line-height: 26px;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 29px;
+      background: var(--color-primary);
+      content: "";
+    }
+  }
   p {
     color: #c4c4c4;
   }
@@ -35,3 +51,42 @@ img {
   height: 100%; /* Altura deseada para la imagen */
   object-fit: cover; /* Corta la imagen para que cubra completamente el contenedor */
 }
+
+// us section
+
+.us_section {
+  background-image: url("../../../assets/img/hero-prueba.jpg");
+  background-size: cover;
+  color: #ffff;
+
+  .us_container {
+    display: flex;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 25px 10px 0 10px;
+
+      .img-box {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .detail-box {
+        h5 {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// end us section

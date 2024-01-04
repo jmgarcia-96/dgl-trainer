@@ -5,7 +5,48 @@
 ></app-breadcrumb>
 <section id="services" class="services">
   <div class="container">
-    <div class="grid">
+    <div class="service-container flex flex-column">
+      <div
+        class="service flex flex-column lg:flex-row"
+        *ngFor="let serv of services"
+      >
+        <div class="photo lg:col-3">
+          <img [src]="serv.img" alt="{{ serv.img }}" width="100%" />
+        </div>
+        <div class="text lg:col-9">
+          <h4>{{ serv.title }}</h4>
+          <div class="text-justify">
+            <p>{{ serv.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="photo-container flex lg:flex-wrap flex-column">
+      <div class="photo" *ngFor="let serv of services">
+        <img [src]="serv.img" alt="{{ serv.img }}" />
+        <div class="overlay">
+          <h4>{{ serv.title }}</h4>
+          <div class="text-justify">
+            <span>{{ serv.description }}</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<!-- End Services Section -->
+<!-- <p-card header="{{ service.title }}">
+          <ng-template pTemplate="header">
+            <div class="rounded-icon">
+              <i [class]="service.icon"></i>
+            </div>
+          </ng-template>
+          <p class="m-0">
+            {{ nservice.descriptio }}
+          </p>
+        </p-card> -->
+
+<!-- <div class="grid">
       <div
         class="col-12 sm:col-6 lg:col-3 text-center cursor-pointer card"
         *ngFor="let service of services"
@@ -22,19 +63,5 @@
             </div>
           </div>
         </div>
-
-        <!-- <p-card header="{{ service.title }}">
-          <ng-template pTemplate="header">
-            <div class="rounded-icon">
-              <i [class]="service.icon"></i>
-            </div>
-          </ng-template>
-          <p class="m-0">
-            {{ nservice.descriptio }}
-          </p>
-        </p-card> -->
       </div>
-    </div>
-  </div>
-</section>
-<!-- End Services Section -->
+    </div> -->
