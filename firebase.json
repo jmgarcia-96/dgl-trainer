@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "dist/dgl-trainer",
+    "site": "dgltrainer",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

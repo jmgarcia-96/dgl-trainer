@@ -8,7 +8,7 @@ export class ContactConstants {
     },
     {
       title: 'Email',
-      text: 'dgl.trainer@gmail.com',
+      text: 'dgltrainer.info@gmail.com',
       icon: 'pi pi-envelope',
       children: [],
     },
