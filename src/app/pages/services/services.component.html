@@ -1,67 +1,57 @@
 <app-breadcrumb
-  [title]="'Nuestros'"
-  [subtitle]="'servicios'"
+  [title]="'Mis'"
+  [subtitle]="'Servicios'"
   [img]="'assets/img/mancuernas5.jpg'"
 ></app-breadcrumb>
 <section id="services" class="services">
-  <div class="container">
-    <div class="service-container flex flex-column">
+  <div class="container pt-3 lg:pt-0 flex justify-content-center">
+    <div
+      class="service-container flex flex-column gap-5 lg:gap-2 lg:flex-row lg:col-11"
+    >
       <div
-        class="service flex flex-column lg:flex-row"
+        class="lg:col-4 plan"
+        *ngFor="let plan of plans"
+        (click)="seleccionarPlan(plan)"
+      >
+        <p-card
+          header="{{ plan.title }}"
+          [ngClass]="plan?.active ? 'selected' : ''"
+        >
+          <div class="item" *ngFor="let item of plan?.items">
+            <div class="icon">
+              <i class="pi pi-check success" *ngIf="item.include"></i>
+              <i class="pi pi-times error" *ngIf="!item.include"></i>
+            </div>
+            <div class="text">
+              <span>{{ item.text }}</span>
+            </div>
+          </div>
+          <ng-template pTemplate="footer">
+            <p-button *ngIf="plan?.active" label="Más info"></p-button>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="services" class="services">
+  <div class="container">
+    <div class="service-container flex flex-row col-12">
+      <div
+        class="service flex flex-column col-6 align-items-center"
         *ngFor="let serv of services"
       >
-        <div class="photo lg:col-3">
-          <img [src]="serv.img" alt="{{ serv.img }}" width="100%" />
-        </div>
-        <div class="text lg:col-9">
+        <div class="text">
           <h4>{{ serv.title }}</h4>
           <div class="text-justify">
             <p>{{ serv.description }}</p>
           </div>
         </div>
+        <div class="photo col-6 flex">
+          <img [src]="serv.img" alt="{{ serv.img }}" width="50%" />
+        </div>
       </div>
     </div>
-    <!-- <div class="photo-container flex lg:flex-wrap flex-column">
-      <div class="photo" *ngFor="let serv of services">
-        <img [src]="serv.img" alt="{{ serv.img }}" />
-        <div class="overlay">
-          <h4>{{ serv.title }}</h4>
-          <div class="text-justify">
-            <span>{{ serv.description }}</span>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
-</section>
-<!-- End Services Section -->
-<!-- <p-card header="{{ service.title }}">
-          <ng-template pTemplate="header">
-            <div class="rounded-icon">
-              <i [class]="service.icon"></i>
-            </div>
-          </ng-template>
-          <p class="m-0">
-            {{ nservice.descriptio }}
-          </p>
-        </p-card> -->
-
-<!-- <div class="grid">
-      <div
-        class="col-12 sm:col-6 lg:col-3 text-center cursor-pointer card"
-        *ngFor="let service of services"
-      >
-        <div class="class-item">
-          <div class="ci-pic">
-            <img [src]="service.img" alt="" />
-          </div>
-
-          <div class="ci-text">
-            <h4>{{ service.title }}</h4>
-            <div class="text-justify">
-              <span>{{ service.description }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+</section> -->

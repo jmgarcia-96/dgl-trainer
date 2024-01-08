@@ -30,6 +30,102 @@ export class ServicesConstants {
     },
   ];
 
+  public readonly plans: any[] = [
+    {
+      title: 'Nutrición',
+      description: 'Nutrición',
+      img: 'assets/img/entrenamiento.jpg',
+      items: [
+        { text: 'Planificación de comidas 100% personalizado', include: true },
+        {
+          text: 'Plan adaptado a tus macros y gustos alimenticios',
+          include: true,
+        },
+
+        { text: 'Programa de entrenamientos', include: false },
+        {
+          text: 'Rutina adaptada en base al lugar de entrenamiento',
+          include: false,
+        },
+        {
+          text: 'Corrección de la técnica de entrenamiento vía online',
+          include: false,
+        },
+        { text: 'Asesoramiento de suplementación deportiva', include: true },
+
+        { text: 'Revisiones semanales de tus progresos', include: true },
+        {
+          text: 'Coaching personalizado mediante chat de WhatsApp',
+          include: true,
+        },
+        { text: 'Resolución de dudas vía WhatsApp', include: true },
+      ],
+      active: false,
+    },
+    {
+      title: 'Completo',
+      description: 'Completo',
+      img: 'assets/img/entrenamiento.jpg',
+      items: [
+        { text: 'Planificación de comidas 100% personalizado', include: true },
+        {
+          text: 'Plan adaptado a tus macros y gustos alimenticios',
+          include: true,
+        },
+
+        { text: 'Programa de entrenamientos', include: true },
+        {
+          text: 'Rutina adaptada en base al lugar de entrenamiento',
+          include: true,
+        },
+        {
+          text: 'Corrección de la técnica de entrenamiento vía online',
+          include: true,
+        },
+        { text: 'Asesoramiento de suplementación deportiva', include: true },
+
+        { text: 'Revisiones semanales de tus progresos', include: true },
+        {
+          text: 'Coaching personalizado mediante chat de WhatsApp',
+          include: true,
+        },
+        { text: 'Resolución de dudas vía WhatsApp', include: true },
+      ],
+      active: true,
+    },
+    {
+      title: 'Entrenamiento',
+      description: 'Entrenamiento',
+      img: 'assets/img/entrenamiento.jpg',
+      items: [
+        { text: 'Planificación de comidas 100% personalizado', include: false },
+        {
+          text: 'Plan adaptado a tus macros y gustos alimenticios',
+          include: false,
+        },
+
+        { text: 'Programa de entrenamientos', include: true },
+        {
+          text: 'Rutina adaptada en base al lugar de entrenamiento',
+          include: true,
+        },
+        {
+          text: 'Corrección de la técnica de entrenamiento vía online',
+          include: true,
+        },
+        { text: 'Asesoramiento de suplementación deportiva', include: true },
+
+        { text: 'Revisiones semanales de tus progresos', include: true },
+        {
+          text: 'Coaching personalizado mediante chat de WhatsApp',
+          include: true,
+        },
+        { text: 'Resolución de dudas vía WhatsApp', include: true },
+      ],
+      active: false,
+    },
+  ];
+
   public readonly faq: any[] = [
     {
       question: '¿Quién hace las asesorías?',

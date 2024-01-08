@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ServicesComponent implements OnInit {
   services: any[] = [];
+  plans: any[] = [];
 
   constructor(
     private servicesConstants: ServicesConstants,
@@ -17,7 +18,15 @@ export class ServicesComponent implements OnInit {
   ) {
     this.titleService.setTitle('DGLTrainer - Servicios');
     this.services = this.servicesConstants.services;
+    this.plans = this.servicesConstants.plans;
   }
 
   ngOnInit(): void {}
+
+  seleccionarPlan(plan: any): void {
+    // Desmarcar todos los planes
+    this.plans?.forEach((p) => (p.active = false));
+    // Marcar el plan seleccionado
+    plan.active = true;
+  }
 }

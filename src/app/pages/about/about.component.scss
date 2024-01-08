@@ -1,36 +1,11 @@
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-
-// :host ::ng-deep .p-carousel .p-link {
-//   color: var(--color-primary) !important;
-//   &:focus {
-//     box-shadow: none;
-//   }
-//   &:hover {
-//     color: var(--color-white) !important;
-//     background-color: var(--color-primary) !important;
-//   }
-// }
-
-// :host
-//   ::ng-deep
-//   .p-carousel
-//   .p-carousel-indicators
-//   .p-carousel-indicator.p-highlight
-//   button {
-//   background-color: var(
-//     --color-primary
-//   ) !important; /* Cambia este color según tus preferencias */
-// }
-
 .trainer-info {
   & h4 {
     position: relative;
     padding-left: 12px;
-    margin-bottom: 20px;
     line-height: 26px;
-    position: relative;
     &:before {
       position: absolute;
       left: 0;
@@ -42,7 +17,7 @@
     }
   }
   p {
-    color: #c4c4c4;
+    color: var(--color-lightgray);
   }
 }
 
@@ -55,9 +30,28 @@ img {
 // us section
 
 .us_section {
-  background-image: url("../../../assets/img/hero-prueba.jpg");
+  background-image: url("../../../assets/img/hero-breadcrumb.jpg");
   background-size: cover;
+  background-position: center;
   color: #ffff;
+  & .heading_container h2 {
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 46px;
+    position: relative;
+    text-align: center;
+    &:before {
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      right: 0;
+      left: 0;
+      top: 49px;
+      margin: 0 auto;
+      background: var(--color-white);
+      content: "";
+    }
+  }
 
   .us_container {
     display: flex;
