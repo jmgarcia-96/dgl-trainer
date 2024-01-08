@@ -329,6 +329,17 @@ section {
       color: var(--color-white);
       text-transform: uppercase;
     }
+    // & .p-card-header div {
+    //   padding: 0.5rem;
+    //   background-color: var(--color-primary);
+    //   & h3 {
+    //     text-align: center;
+    //     color: var(--color-white);
+    //     text-transform: uppercase;
+    //     font-family: var(--font-secondary);
+    //   }
+    //}
+
     & .p-card-footer {
       text-align: center;
       & .p-button {

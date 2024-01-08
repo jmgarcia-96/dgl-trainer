@@ -57,3 +57,69 @@
 //     }
 //   }
 // }
+
+// us section
+
+.steps {
+  // background-image: url("../../../assets/img/hero-breadcrumb.jpg");
+  // background-size: cover;
+  // background-position: center;
+  background-color: black;
+  color: #ffff;
+  & .heading_container h2 {
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 46px;
+    position: relative;
+    text-align: center;
+    &:before {
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      right: 0;
+      left: 0;
+      top: 49px;
+      margin: 0 auto;
+      background: var(--color-white);
+      content: "";
+    }
+  }
+
+  .steps_container {
+    display: flex;
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      .img-box {
+        height: 190px;
+        img {
+          height: 190px;
+          max-width: 100%;
+        }
+      }
+
+      .detail-box {
+        h3 {
+          font-weight: bold;
+          text-transform: uppercase;
+          position: relative;
+          padding-left: 12px;
+          line-height: 26px;
+          &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 29px;
+            background: var(--color-primary);
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+// end us section

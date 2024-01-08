@@ -24,9 +24,7 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {}
 
   seleccionarPlan(plan: any): void {
-    // Desmarcar todos los planes
     this.plans?.forEach((p) => (p.active = false));
-    // Marcar el plan seleccionado
     plan.active = true;
   }
 }

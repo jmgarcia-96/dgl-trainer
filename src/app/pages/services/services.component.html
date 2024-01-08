@@ -17,6 +17,11 @@
           header="{{ plan.title }}"
           [ngClass]="plan?.active ? 'selected' : ''"
         >
+          <!-- <ng-template pTemplate="header">
+            <div>
+              <h3>{{ plan.title }}</h3>
+            </div>
+          </ng-template> -->
           <div class="item" *ngFor="let item of plan?.items">
             <div class="icon">
               <i class="pi pi-check success" *ngIf="item.include"></i>
@@ -27,9 +32,34 @@
             </div>
           </div>
           <ng-template pTemplate="footer">
-            <p-button *ngIf="plan?.active" label="Más info"></p-button>
+            <p-button
+              *ngIf="plan?.active"
+              label="Más información"
+              routerLink="/contact"
+            ></p-button>
           </ng-template>
         </p-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <div class="heading_container">
+      <h2>¿En qué consisten mis planes?</h2>
+    </div>
+    <div class="steps_container grid flex-column md:flex-row">
+      <div class="box col-12 md:col-6 lg:col-3" *ngFor="let step of services">
+        <div class="img-box">
+          <img [src]="step.img" alt="" />
+        </div>
+        <div class="detail-box">
+          <h3>{{ step?.title }}</h3>
+          <p>
+            {{ step?.description }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
