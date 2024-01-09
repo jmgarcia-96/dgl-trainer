@@ -1,26 +1,73 @@
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.icon {
-  font-size: 30px;
-  color: var(--color-white);
-  display: inline-block;
-  height: 65px;
-  width: 65px;
-  background: var(--color-primary);
-  border-radius: 25%;
-  line-height: 65px;
-  text-align: center;
-}
 
-:host ::ng-deep .p-button {
-  width: 100% !important;
-}
+.contact {
+  & .info-container {
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    & .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      & .icon {
+        font-size: 30px;
+        color: var(--color-white);
+        display: inline-block;
+        height: 65px;
+        width: 65px;
+        background: var(--color-primary);
+        border-radius: 25%;
+        line-height: 65px;
+        text-align: center;
+      }
+      & .info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        & .insta-account {
+          color: var(--color-white);
+          &:hover {
+            color: var(--color-primary);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  & .photo {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 
-.insta-account {
-  color: var(--color-white);
-  &:hover {
-    color: var(--color-primary);
-    cursor: pointer;
+    img {
+      width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+      height: 100%; /* Altura deseada para la imagen */
+      object-fit: cover; /* Corta la imagen para que cubra completamente el contenedor */
+    }
+  }
+  & .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    h4 {
+      position: relative;
+      padding-left: 12px;
+      line-height: 26px;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 29px;
+        background: var(--color-primary);
+        content: "";
+      }
+    }
   }
 }

@@ -5,16 +5,14 @@
 ></app-breadcrumb>
 <section id="contact" class="contact">
   <div class="container">
-    <div class="flex flex-column md:flex-row">
-      <div
-        class="col-12 md:col-6 flex flex-column justify-content-center gap-3"
-      >
-        <div
-          class="flex flex-row justify-content-center align-items-center w-full gap-3"
-          *ngFor="let info of infoList"
-        >
+    <div class="info-container flex flex-column md:flex-row">
+      <div class="photo flex flex-column lg:hidden col-6">
+        <img src="assets/img/chefs/chefs-1.jpg" />
+      </div>
+      <div class="flex flex-column col-12 md:col-6 lg:col-12 lg:flex-row">
+        <div class="info col-12 lg:col-4" *ngFor="let info of infoList">
           <i [class]="info.icon" ngClass="icon"></i>
-          <div class="flex flex-column justify-content-start w-full">
+          <div class="info-text">
             <span class="font-bold text-white">{{ info.title }}</span>
             <span class="text-white" [hidden]="info.title === 'Instagram'">{{
               info.text
@@ -31,10 +29,15 @@
           </div>
         </div>
       </div>
-      <div class="col-12 md:col-6 flex flex-column gap-2">
+    </div>
+    <div class="flex flex-column lg:flex-row">
+      <div class="photo hidden lg:flex lg:flex-column col-12 lg:col-4">
+        <img src="assets/img/chefs/chefs-1.jpg" />
+      </div>
+      <div class="form col-12 lg:col-8">
+        <h4 class="uppercase uWhite text-2xl">Formulario de contacto</h4>
         <input pInputText placeholder="Nombre" class="w-full" />
         <input pInputText placeholder="Email" class="w-full" />
-        <input pInputText placeholder="Teléfono" class="w-full" />
         <textarea
           rows="5"
           cols="30"
@@ -42,9 +45,8 @@
           class="w-full"
           placeholder="Escribe tu mensaje"
         ></textarea>
-        <p-button label="Enviar" class="btn-primary"></p-button>
+        <p-button label="Enviar" class="btn--fw btn-primary"></p-button>
       </div>
     </div>
   </div>
 </section>
-<!-- End Contact Section -->

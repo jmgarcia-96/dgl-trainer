@@ -34,3 +34,19 @@ img {
     }
   }
 }
+
+.social-links {
+  & .user {
+    position: relative;
+    padding-left: 1rem;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      height: 16px;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.3);
+      content: "";
+    }
+  }
+}

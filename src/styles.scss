@@ -176,14 +176,25 @@ section {
 /*--------------------------------------------------------------
 # BOTONES
 --------------------------------------------------------------*/
+.btn {
+  &--fw {
+    & .p-button {
+      width: 100%;
+    }
+  }
+}
 .btn-primary {
   & .p-button {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: 0;
     &:enabled:hover {
-      background-color: var(--color-primary);
+      background: #d97706;
       color: var(--color-white);
+      border-color: #d97706;
+    }
+    &:focus {
+      box-shadow: none;
     }
   }
   &--shadow {
@@ -203,6 +214,16 @@ section {
       background-color: transparent;
       color: var(--color-white);
       border: 2px solid var(--color-primary);
+    }
+  }
+  &--rounded {
+    & .p-button {
+      border-radius: 2rem;
+      border: 0;
+      &:enabled:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
     }
   }
 }

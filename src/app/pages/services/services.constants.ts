@@ -24,7 +24,7 @@ export class ServicesConstants {
     {
       title: 'Seguimiento',
       description:
-        'Realizaremos un seguimiento constante para ir valorando el progreso y realizar los ajustes necesarios.',
+        'Se realizará un seguimiento constante para ir valorando el progreso y realizar los ajustes necesarios.',
       icon: 'pi pi-check-circle',
       img: 'assets/img/seguimiento.jpg',
     },
