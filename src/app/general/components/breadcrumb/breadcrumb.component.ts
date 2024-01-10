@@ -13,13 +13,13 @@ export class BreadcrumbComponent {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit() {
-    // const containerElement = this.el.nativeElement.querySelector(
-    //   '.breadcrumb-section'
-    // );
-    // this.renderer.setStyle(
-    //   containerElement,
-    //   'background-image',
-    //   `url(${this.img})`
-    // );
+    const containerElement = this.el.nativeElement.querySelector(
+      '.breadcrumb-section'
+    );
+    this.renderer.setStyle(
+      containerElement,
+      'background-image',
+      `url(${this.img})`
+    );
   }
 }

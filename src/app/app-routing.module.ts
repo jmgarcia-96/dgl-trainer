@@ -12,7 +12,6 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-    data: { animation: 'fadeAnimation' },
   },
   { path: 'services', component: ServicesComponent },
   { path: 'faq', component: FaqComponent },

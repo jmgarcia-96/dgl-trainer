@@ -8,32 +8,37 @@ import { Title } from '@angular/platform-browser';
   providers: [],
 })
 export class HeroComponent {
-  images: any[] = [];
-
-  get activeIndex(): number {
-    return this._activeIndex;
-  }
-
-  set activeIndex(newValue) {
-    if (this.images && 0 <= newValue && newValue <= this.images.length - 1) {
-      this._activeIndex = newValue;
-    }
-  }
-
-  _activeIndex: number = 2;
-
-  responsiveOptions: any[] = [
+  keys: any[] = [
     {
-      breakpoint: '1024px',
-      numVisible: 5,
+      title: 'Determinación',
+      img: 'img/icon-1.png',
+      description:
+        'Creer y confiar en sí mismo es el primer paso para lograr tus objetivos.',
+      color: '',
+      number: '01',
     },
     {
-      breakpoint: '768px',
-      numVisible: 3,
+      title: 'Disciplina',
+      img: 'img/icon-1.png',
+      description: 'Teniendo constancia día tras día, los resultados llegarán.',
+      color: 'color-1',
+      number: '02',
     },
     {
-      breakpoint: '560px',
-      numVisible: 1,
+      title: 'Dieta',
+      img: 'img/icon-1.png',
+      description:
+        'La dieta personalizada y su estricto cumplimiento es uno de los pilares para conseguir el físico deseado.',
+      color: 'color-2',
+      number: '03',
+    },
+    {
+      title: 'Entrenamiento',
+      img: 'img/icon-1.png',
+      description:
+        'Realiza cada entrenamiento con alta intensidad y siempre enfocado en cada repetición/serie.',
+      color: 'color-3',
+      number: '04',
     },
   ];
 
@@ -41,19 +46,5 @@ export class HeroComponent {
     this.titleService.setTitle('DGLTrainer - Inicio');
   }
 
-  ngOnInit() {
-    this.images = [
-      'src/assets/img/hero-2.jpg',
-      'src/assets/img/hero-2.jpg',
-      'src/assets/img/hero-2.jpg',
-    ];
-  }
-
-  next() {
-    this.activeIndex++;
-  }
-
-  prev() {
-    this.activeIndex--;
-  }
+  ngOnInit() {}
 }

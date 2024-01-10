@@ -1,6 +1,8 @@
 <div
-  class="flex justify-content-between flex-row relative px-4 lg:px-8 py-3 z-5 gap-8 md:gap-1 bg-black-alpha-90"
+  class="navbar fixed-top px-4 lg:px-8 py-3 z-5 gap-8 md:gap-1"
+  [ngClass]="isNavbarScrolled ? 'fixed-nav' : ''"
 >
+  <!--  -->
   <div class="flex flex-row cursor-pointer zoom-animation" routerLink="/home">
     <img src="assets/img/Logo-DGL2.png" />
   </div>

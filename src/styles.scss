@@ -19,6 +19,7 @@
   --color-default: #212529;
   //--color-primary: #08aa19; //#ce1212;
   --color-primary: #f59e0b; //#7d153b; //#ce1212;
+  --color-primary-dark: #d97706; //#7d153b; //#ce1212;
   --color-secondary: #7f7f90;
   --color-select: #f6f4f4;
   --color-black: black;
@@ -86,32 +87,32 @@ section {
   }
 }
 
-.section-header {
-  text-align: center;
-  //padding-bottom: 30px;
-  //padding-top: 30px;
-  & p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 600;
-    font-family: var(--font-primary);
-    color: var(--color-white);
-    text-transform: uppercase;
-    & span {
-      color: var(--color-primary);
-    }
-  }
-}
+// .section-header {
+//   text-align: center;
+//   //padding-bottom: 30px;
+//   //padding-top: 30px;
+//   & p {
+//     margin: 0;
+//     font-size: 48px;
+//     font-weight: 600;
+//     font-family: var(--font-primary);
+//     color: var(--color-white);
+//     text-transform: uppercase;
+//     & span {
+//       color: var(--color-primary);
+//     }
+//   }
+// }
 
-@media screen and (max-width: 992px) {
-  section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    & .section-header p {
-      font-size: 30px; /* Tamaño del texto reducido para pantallas más pequeñas */
-    }
-  }
-}
+// @media screen and (max-width: 992px) {
+//   section {
+//     padding-top: 30px;
+//     padding-bottom: 30px;
+//     & .section-header p {
+//       font-size: 30px; /* Tamaño del texto reducido para pantallas más pequeñas */
+//     }
+//   }
+// }
 
 /*--------------------------------------------------------------
 # PRELOADER
@@ -189,9 +190,9 @@ section {
     color: var(--color-white);
     border: 0;
     &:enabled:hover {
-      background: #d97706;
+      background: var(--color-primary-dark);
       color: var(--color-white);
-      border-color: #d97706;
+      border-color: var(--color-primary-dark);
     }
     &:focus {
       box-shadow: none;
@@ -256,14 +257,34 @@ section {
 /*--------------------------------------------------------------
 # Boton Pantalla Hero
 --------------------------------------------------------------*/
-.btn-hero .p-button {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: 0;
-  &:enabled:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    box-shadow: 5px 5px 40px var(--color-primary);
+.btn-hero {
+  & .p-button {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 18px 35px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary) 0%,
+      var(--color-primary-dark) 100%
+    );
+  }
+
+  &:hover .p-button {
+    background: linear-gradient(
+      90deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary) 100%
+    );
+    color: #fff !important;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    border: none;
   }
 }
 /*--------------------------------------------------------------

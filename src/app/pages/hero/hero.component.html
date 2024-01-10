@@ -1,4 +1,4 @@
-<section id="hero" class="hero section-bg flex align-items-center">
+<!-- <section id="hero" class="hero section-bg flex align-items-center">
   <div class="container">
     <div class="overlay-intro"></div>
 
@@ -19,6 +19,57 @@
             styleClass="p-button-sm"
             routerLink="/contact"
           ></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="hero" class="slider relative h-screen">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 lg:col-8">
+        <!-- <span class="subhead uppercase">Daniel García Lanzas</span> -->
+
+        <h1>
+          Tu <span>cuerpo</span><br />
+          logra lo que
+          <br />la <span>mente</span> cree
+        </h1>
+
+        <p-button
+          class="btn-hero"
+          label="Comienza tu cambio"
+          styleClass="p-button-sm"
+          routerLink="/contact"
+        ></p-button>
+        <!-- class="btn-primary btn-primary--shadow" -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="key">
+  <div class="container">
+    <div class="section-title">
+      <h2>4 Puntos clave para conseguir tus objetivos</h2>
+      <p>
+        Our fitness experts can help you discover new training techniques and
+        exercises that offer a dynamic and efficient full-body workout.
+      </p>
+    </div>
+    <div class="services-items grid flex-column lg:flex-row">
+      <div
+        class="col-12 lg:col-6"
+        [ngClass]="key?.color"
+        *ngFor="let key of keys"
+      >
+        <div class="single-service-item hover-style-1">
+          <span class="number">{{ key?.number }}</span>
+          <h3 class="mt-3">{{ key?.title }}</h3>
+          <p class="mt-3 mb-4">
+            {{ key?.description }}
+          </p>
         </div>
       </div>
     </div>
