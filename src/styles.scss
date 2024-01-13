@@ -232,7 +232,21 @@ section {
 /*--------------------------------------------------------------
 # Configuracion overlayPanel para menu movil
 --------------------------------------------------------------*/
+
+// .p-menu {
+//   width: 100% !important;
+//   margin-top: 96px !important;
+//   &.p-menu-overlay {
+//     position: fixed;
+//     display: block !important;
+//     top: 0 !important;
+//   }
+// }
 .p-overlaypanel {
+  position: fixed !important;
+  display: block !important;
+  top: 0 !important;
+  margin-top: 96px !important;
   width: 100% !important;
   &:before,
   &:after {

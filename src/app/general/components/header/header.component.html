@@ -41,26 +41,29 @@
   </div>
 </div>
 
-<div class="w-full">
-  <p-overlayPanel #menu>
-    <ng-template pTemplate="content">
-      <div>
-        <ul class="flex flex-column align-items-center m-0 p-0 list-none">
-          <li
-            *ngFor="let item of generalService.items"
-            class="menu-item menu-item--mobile"
-          >
-            <div>
-              <a
-                [routerLink]="item?.routerLink"
-                routerLinkActive="active"
-                (click)="activeMenu()"
-                >{{ item?.label }}</a
-              >
-            </div>
-          </li>
-        </ul>
-      </div>
-    </ng-template>
-  </p-overlayPanel>
-</div>
+<!-- <p-menu #menu [model]="generalService.items" [popup]="true">
+  <ng-template pTemplate="item" let-item>
+  </ng-template>
+</p-menu> -->
+
+<p-overlayPanel #menu>
+  <ng-template pTemplate="content">
+    <div>
+      <ul class="flex flex-column align-items-center m-0 p-0 list-none">
+        <li
+          *ngFor="let item of generalService.items"
+          class="menu-item menu-item--mobile"
+        >
+          <div>
+            <a
+              [routerLink]="item?.routerLink"
+              routerLinkActive="active"
+              (click)="activeMenu()"
+              >{{ item?.label }}</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+</p-overlayPanel>

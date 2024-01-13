@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { GeneralService } from '../../services/general.service';
 import { OverlayPanel } from 'primeng/overlaypanel';
+import { Menu } from 'primeng/menu';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -14,7 +15,8 @@ import { OverlayPanel } from 'primeng/overlaypanel';
 })
 export class HeaderComponent implements OnInit {
   @Input() active: string = '';
-  @ViewChild('menu') menu: OverlayPanel | undefined;
+  // @ViewChild('menu') menu: OverlayPanel | undefined;
+  @ViewChild('menu') menu: Menu | undefined;
   isOpened: boolean = false;
 
   isNavbarScrolled = false;
@@ -32,6 +34,13 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isOpened = !this.isOpened;
+    // const element = this.menu?.el?.nativeElement?.querySelector('.p-menu');
+    // if (!this.isOpened) {
+    //   element.style.position = 'absolute'; // Cambiar según tus necesidades
+    //   this.menu?.hide();
+    // } else {
+    //   element.style.position = 'fixed'; // Cambiar según tus necesidades
+    // }
   }
 
   activeMenu() {
